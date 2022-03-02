@@ -1,0 +1,110 @@
+/* Variables */
+:root {
+  --color-1: #d5e0fb;
+  --color-2: #4b7bec;
+  --hover-color: #1d59e7;
+  --active-color: #799df1;
+}
+
+/* General-Styles */
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, var(--color-1) 0%, var(--color-2) 100%);
+}
+
+input, select {
+  border: 1px solid var(--color-2);
+  border-radius: 5px;
+}
+
+input:focus-visible, select:focus-visible {
+  box-shadow: 0px 0px 0px 2px var(--color-2);
+}
+
+select {
+  background-image: url(../../icons/expand.svg);
+  background-position: right 8px center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+span.val {
+  color: #1d59e7
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(75,123,236,1); 
+  border-radius: 5px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(180,180,180); 
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #0000CD;
+}
+
+/* Scrollbar */
+/* General-Styles*/
+
+/* Component-Styles */
+.app {
+  margin: 30px 0;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app .row {
+  display:flex;
+  width:100%;
+  flex: 60vh 0 0;
+  max-height: 60vh;
+  min-height: 400px;
+}
+
+@media screen and (max-width:1024px) {
+  .app {
+    margin: 20px;
+    padding: 20px
+  }
+  .app .row {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    flex: 120vh 0 0;
+    max-height: 120vh;
+  }
+}
