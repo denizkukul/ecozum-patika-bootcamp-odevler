@@ -1,4 +1,6 @@
 ## HW-1
+İstenen:
+Verilen folders arrayi içince çalışacak move,copy,remove,removeFolder ve parentFolderOf fonksiyonlarının yazılması
 ```js
 const folders = [
   {
