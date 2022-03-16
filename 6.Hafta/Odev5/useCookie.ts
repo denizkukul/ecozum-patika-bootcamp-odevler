@@ -4,6 +4,9 @@ export const useCookie = () => {
 
   // Return value of cookieName or ''
   const getCookie = useCallback((cookieName: string) => {
+    // document.cookie is a string formatted as 'cookie1=value1; cookie2=value2; ...'
+    // String.match(regex) method returns an array of strings matching given regex
+    // Array.pop() method removes and returns last element of the array (in this case last match group of regex)
     return document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)')?.pop() || ''
   }, [])
 
